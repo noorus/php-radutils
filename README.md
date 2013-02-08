@@ -1,7 +1,16 @@
 php-radutils
 ============
 
-Small library of minimal, namespaced utility classes for rapid development.
+Small library of minimal, namespaced utility classes for rapid PHP development.
+
+Usage
+-----
+
+Just copy the files to your project directory and require the autoloader:
+
+    require( 'util.autoload.php' );
+
+This way each utility class will be automatically available when used.
 
 Components
 ----------
@@ -10,7 +19,7 @@ Components
 
 Used for writing timestamped log files.  
 Data is expected to be UTF-8; UTF-8 BOM is written automatically.  
-If log file already exists, it will be appended to.
+If the file already exists, it will be appended to instead.
 
     $log = new \Util\Logger( 'my-logfile.log' );
     $log->printf( 'It\'s such a %s day to say %d!', 'lovely', 1234 );
@@ -33,7 +42,7 @@ Used for micro-timing operations.
 
 Used for generating XML output with minimal code.  
 Acts as a simplifying wrapper around XMLWriter.  
-Allows chaining of calls. UTF-8 data only.
+Allows chaining of calls. Only UTF-8 data in & out.
 
     $xml = new \Util\QuickXMLOut();
     $xml->start( 'list' )->attribute( 'type', 'shopping' );
