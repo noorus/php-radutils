@@ -6,7 +6,7 @@ Small library of minimal, namespaced utility classes for rapid development.
 Components
 ----------
 
-### Util\Logger
+### Logger
 
 Used for writing timestamped log files.  
 Data is expected to be UTF-8; UTF-8 BOM is written automatically.  
@@ -16,7 +16,7 @@ If log file already exists, it will be appended to.
     $log->printf( 'It\'s such a %s day to say %d!', 'lovely', 1234 );
     $log->done();
 
-### Util\Timing
+### Timing
 
 Used for micro-timing operations.
 
@@ -29,7 +29,7 @@ Used for micro-timing operations.
     printf( 'Sub-operation 2 took %f seconds', $timing->end() );
     printf( 'Everything took %f seconds', $timing->done() );
 
-### Util\QuickXMLOut
+### QuickXMLOut
 
 Used for generating XML output with minimal code.  
 Acts as a simplifying wrapper around XMLWriter.  
@@ -46,5 +46,5 @@ Allows chaining of calls. UTF-8 data only.
 License
 -------
 
-Files in the php-radutils project are licensed under the MIT license.
-For full lciense text, see the LICENSE file.
+Files in php-radutils are licensed under the MIT license.  
+For full license text, see the LICENSE file.
