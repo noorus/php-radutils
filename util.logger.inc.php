@@ -16,7 +16,7 @@
     {
       $this->_file = fopen( $filename, 'a' );
       if ( !is_resource( $this->_file ) )
-        throw new Exception( 'Could not open log file for writing' );
+        throw new \RuntimeException( 'Could not open log file for writing' );
       if ( ftell( $this->_file ) < 1 )
         fwrite( $this->_file, sprintf( '%c%c%c', 0xEF, 0xBB, 0xBF ) );
       if ( $buffer )
@@ -29,9 +29,9 @@
     public function printf()
     {
       if ( !is_resource( $this->_file ) )
-        throw new Exception( 'Log file is not open' );
+        throw new \RuntimeException( 'Log file is not open' );
       if ( func_num_args() < 1 )
-        throw new Exception( 'Not enough arguments' );
+        throw new \RuntimeException( 'Not enough arguments' );
       $vargs = func_get_args();
       $line = array_splice( $vargs, 0, 1 );
       $line = vsprintf( $line[0], $vargs );
@@ -43,7 +43,7 @@
     public function flush()
     {
       if ( !is_resource( $this->_file ) )
-        throw new Exception( 'Log file is not open' );
+        throw new \RuntimeException( 'Log file is not open' );
       fflush( $this->_file );
     }
     public function getBuffer()

@@ -19,7 +19,7 @@ Components
 
 Used for writing timestamped log files.  
 Data is expected to be UTF-8; UTF-8 BOM is written automatically.  
-If the file already exists, it will be appended to instead.
+If the file already exists, it will be appended to.
 
     $log = new \Util\Logger( 'my-logfile.log' );
     $log->printf( 'It\'s such a %s day to say %d!', 'lovely', 1234 );
@@ -51,6 +51,16 @@ Allows chaining of calls. Only UTF-8 data in & out.
     $xml->element( 'item', 'ham' );
     $xml->end(); // end list
     print( $xml->done() ); // get output
+
+### CSVOut
+
+Used for writing CSV files.  
+Data is expected to be UTF-8; UTF-8 BOM is written automatically.  
+If the file already exists, it will be appended to.
+
+    $csv = new \Util\CSVOut();
+    $csv->row( array( 'foo', 'bar', ' "foobar" ' ) );
+    $csv->done();
 
 License
 -------

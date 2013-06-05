@@ -31,7 +31,7 @@
     public function done()
     {
     if ( count( $this->_tasks ) != 1 )
-      throw new Exception( 'One or more unmatched begin/end calls detected' );
+      throw new \RuntimeException( 'One or more unmatched begin/end calls detected' );
       return $this->end();
     }
   }

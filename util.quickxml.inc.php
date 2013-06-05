@@ -29,7 +29,7 @@
       if ( isset( $this->_resolve[$method] ) )
         $method = $this->_resolve[$method];
       if ( !call_user_func_array( array( $this->_xml, $method ), $args ) )
-        throw new Exception( 'XMLWriter call failed: '.$method );
+        throw new \RuntimeException( 'XMLWriter call failed: '.$method );
       return $this;
     }
     public function done()

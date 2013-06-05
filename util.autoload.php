@@ -27,6 +27,9 @@
         case 'Util\QuickXMLOut':
           require_once( 'util.quickxml.inc.php' );
         break;
+        case 'Util\CSVOut':
+          require_once( 'util.csv.inc.php' );
+        break;
       }
     }
   }
