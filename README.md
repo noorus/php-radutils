@@ -58,7 +58,7 @@ Used for writing CSV files.
 Data is expected to be UTF-8; UTF-8 BOM is written automatically.  
 If the file already exists, it will be appended to.
 
-    $csv = new \Util\CSVOut();
+    $csv = new \Util\CSVOut( 'my-csvfile.csv' );
     $csv->row( array( 'foo', 'bar', ' "foobar" ' ) );
     $csv->done();
 
