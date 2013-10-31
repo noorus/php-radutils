@@ -1,6 +1,6 @@
 <?php
 
-  // util.csv » from php-radutils
+  // Util\CSVOut » from php-radutils
   // licensed under the MIT license.
   // see LICENSE for license details.
 

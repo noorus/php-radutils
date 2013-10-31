@@ -1,6 +1,6 @@
 <?php
 
-  // util.quickxml » from php-radutils
+  // Util\XMLOut » from php-radutils
   // licensed under the MIT license.
   // see LICENSE for license details.
 
@@ -8,7 +8,7 @@
 
   namespace Util;
 
-  class QuickXMLOut
+  class XMLOut
   {
     protected $_xml = null;
     protected $_resolve = array(

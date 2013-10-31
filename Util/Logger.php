@@ -1,6 +1,6 @@
 <?php
 
-  // util.logger » from php-radutils
+  // Util\Logger » from php-radutils
   // licensed under the MIT license.
   // see LICENSE for license details.
 

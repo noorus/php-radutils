@@ -1,6 +1,6 @@
 <?php
 
-  // util.timing » from php-radutils
+  // Util\Timing » from php-radutils
   // licensed under the MIT license.
   // see LICENSE for license details.
 
