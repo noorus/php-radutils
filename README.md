@@ -34,13 +34,13 @@ Used for micro-timing operations.
     printf( 'Sub-operation 2 took %f seconds', $timing->end() );
     printf( 'Everything took %f seconds', $timing->done() );
 
-### QuickXMLOut
+### XMLOut
 
 Used for generating XML output with minimal code.  
 Acts as a simplifying wrapper around XMLWriter.  
 Allows chaining of calls. Only UTF-8 data in & out.
 
-    $xml = new \Util\QuickXMLOut();
+    $xml = new \Util\XMLOut();
     $xml->start( 'list' )->attribute( 'type', 'shopping' );
     $xml->element( 'item', 'cucumber' );
     $xml->element( 'item', 'potatoe' );
