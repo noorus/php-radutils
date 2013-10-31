@@ -6,11 +6,7 @@ Small library of minimal, namespaced utility classes for rapid PHP development.
 Usage
 -----
 
-Just copy the files to your project directory and require the autoloader:
-
-    require( 'util.autoload.php' );
-
-This way each utility class will be automatically available when used.
+Add the root as a dependency to a PSR-0 compatible autoloader, or include needed files directly.
 
 Components
 ----------
